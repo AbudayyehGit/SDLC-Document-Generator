@@ -1,0 +1,6 @@
+{
+  "name": "SDLC Document Generator",
+  "description": "Interactive SDLC Document Generator Wizard parsing reverse decision trees across PRD, SDD, Test Strategy, and Runbooks with live markdown preview, auto-saving, and export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
