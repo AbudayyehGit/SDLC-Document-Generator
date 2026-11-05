@@ -98,7 +98,7 @@ ${data.deploymentStrategy || '_Standard rolling deployment._'}
 ${data.monitoringAlerting || '_Standard logs and metrics collection._'}
 
 ### 3. Emergency Incident Response & Rollback Procedures
-${data.rollbackProcedure || '_Follow standard deployment rollback._'}
+${data.rollbackProcedure ? data.rollbackProcedure.replace(/aegis-core|<APP_NAME>/g, (data.projectName || 'app-service').toLowerCase().replace(/[^a-z0-9_-]/g, '-')) : '_Follow standard deployment rollback._'}
 
 ### 4. High Availability & Disaster Recovery (DR)
 ${data.disasterRecovery || '_Standard regional failover._'}

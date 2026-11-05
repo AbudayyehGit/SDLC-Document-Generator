@@ -145,8 +145,8 @@ export const QAWizard: React.FC<QAWizardProps> = ({
           {/* Linked Glossary Terms */}
           {currentQ.glossaryTerms && currentQ.glossaryTerms.length > 0 && (
             <div className="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-[#eaf0f5] text-xs">
-              <span className="flex items-center gap-1 text-[#516b80] font-medium text-[11px]">
-                <BookOpen className="w-3.5 h-3.5 text-[#1e537d]" /> Architecture Terms:
+              <span className="flex items-center gap-1 text-[#516b80] font-semibold text-[11px]">
+                <BookOpen className="w-3.5 h-3.5 text-[#1e537d]" /> Need help with terms? Tap to learn:
               </span>
               {currentQ.glossaryTerms.map(termId => (
                 <GlossaryLink
@@ -222,9 +222,9 @@ export const QAWizard: React.FC<QAWizardProps> = ({
             <div className="bg-[#eef5fa] p-3 rounded-2xl text-xs border border-[#d2e2ec] flex items-start gap-2">
               <CheckCircle2 className="w-4 h-4 text-[#1e537d] shrink-0 mt-0.5" />
               <div>
-                <span className="font-semibold text-[#132b40]">Current Specification: </span>
+                <span className="font-bold text-[#132b40]">Recorded into your engineering document: </span>
                 <span className="text-[#3b5972]">
-                  {currentVal ? currentVal : '(Not yet selected. Tap Yes or No above.)'}
+                  {currentVal ? currentVal : '(Not yet selected. Tap an option above.)'}
                 </span>
               </div>
             </div>

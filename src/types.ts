@@ -16,6 +16,7 @@ export interface TechStack {
 }
 
 export interface SDLCFormData {
+  archetype?: string;
   // PRD (What we are building)
   projectName: string;
   version: string;

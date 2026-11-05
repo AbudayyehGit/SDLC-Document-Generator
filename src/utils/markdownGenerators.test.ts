@@ -49,7 +49,7 @@ test('generateRunbook covers deployment, rollback, and disaster recovery', () =>
   const md = generateRunbook(DEFAULT_FORM_DATA);
   assert.ok(md.includes('### 1. Deployment & Rollout Strategy'));
   assert.ok(md.includes('ArgoCD GitOps Canary deployments'));
-  assert.ok(md.includes('argocd app rollback aegis-core'));
+  assert.ok(md.includes('argocd app rollback aegis-sentinel'));
   assert.ok(md.includes('RPO < 1 minute, RTO < 15 minutes'));
 });
 

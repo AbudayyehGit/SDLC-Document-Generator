@@ -834,7 +834,7 @@ export default function App() {
                   </div>
                   <div>
                     <label htmlFor="field-target-audience" className="block font-bold text-[#132b40] mb-1">
-                      Target Audience & Users
+                      Target Audience (Who will use this software?)
                     </label>
                     <input
                       id="field-target-audience"
@@ -842,7 +842,7 @@ export default function App() {
                       className="w-full bg-[#f8fbfe] border-2 border-[#dce6ee] rounded-2xl px-3.5 py-2 text-[#132b40] focus:outline-none focus:border-[#e59b24] font-medium"
                       value={formData.targetAudience}
                       onChange={e => handleInputChange('targetAudience', e.target.value)}
-                      placeholder="e.g. Enterprise SRE, Compliance Officers"
+                      placeholder="e.g. Retail shoppers, customer service agents"
                     />
                   </div>
                 </div>
@@ -850,7 +850,7 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-1">
                     <label htmlFor="field-problem-statement" className="block font-bold text-[#132b40]">
-                      Problem Statement (The Friction We Solve)
+                      Problem Statement (What friction or pain does this solve?)
                     </label>
                     <GlossaryLink termId="prd" onSelectTerm={handleOpenGlossary}>
                       What is a PRD?
@@ -869,7 +869,7 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-1">
                     <label htmlFor="field-business-objectives" className="block font-bold text-[#132b40]">
-                      Business Goals & Success Numbers
+                      Business Goals (What numbers prove this project succeeded?)
                     </label>
                     <GlossaryLink termId="sla" onSelectTerm={handleOpenGlossary}>
                       SLAs
@@ -890,7 +890,7 @@ export default function App() {
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-bold text-[#132b40]">Must-Have Capabilities & Feature Scope</span>
+                        <span className="font-bold text-[#132b40]">Key Features & Capabilities</span>
                         <GlossaryLink termId="p0-p1-p2" onSelectTerm={handleOpenGlossary}>
                           P0 / P1 / P2 Priorities
                         </GlossaryLink>
@@ -902,7 +902,7 @@ export default function App() {
                       onClick={addFeature}
                       className="text-xs text-[#132b40] bg-[#e59b24] hover:bg-[#d68e1c] px-3.5 py-1.5 rounded-2xl flex items-center gap-1 font-bold transition-colors cursor-pointer shadow-xs"
                     >
-                      <Plus className="w-3.5 h-3.5" /> Add Requirement
+                      <Plus className="w-3.5 h-3.5" /> Add Feature
                     </button>
                   </div>
 
@@ -967,7 +967,7 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-1">
                     <label htmlFor="field-nfr" className="block font-bold text-[#132b40]">
-                      Non-Functional Standards (Speed, Uptime & Encryption)
+                      Reliability & Speed Standards (Uptime, Speed & Security)
                     </label>
                     <GlossaryLink termId="nfr" onSelectTerm={handleOpenGlossary}>
                       What are NFRs?
@@ -991,7 +991,7 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-1">
                     <label htmlFor="field-architecture-pattern" className="block font-bold text-[#132b40]">
-                      System Organization Pattern
+                      How Software Programs Are Organized
                     </label>
                     <div className="flex gap-2">
                       <GlossaryLink termId="microservices" onSelectTerm={handleOpenGlossary}>
@@ -1008,17 +1008,17 @@ export default function App() {
                     value={formData.architecturePattern}
                     onChange={e => handleInputChange('architecturePattern', e.target.value)}
                   >
-                    <option value="Event-Driven Microservices with CQRS">Event-Driven Microservices with CQRS</option>
-                    <option value="Modular Monolith (Domain-Driven Design)">Modular Monolith (Domain-Driven Design)</option>
-                    <option value="Serverless & EventBridge Reactive Pipelines">Serverless & EventBridge Reactive Pipelines</option>
-                    <option value="Hexagonal / Ports & Adapters Architecture">Hexagonal / Ports & Adapters Architecture</option>
+                    <option value="Modular Monolith (Domain-Driven Design)">Single All-in-One Application (Modular Monolith)</option>
+                    <option value="Event-Driven Microservices with CQRS">Independent Microservices (Event-Driven with CQRS)</option>
+                    <option value="Serverless & EventBridge Reactive Pipelines">On-Demand Cloud Functions (Serverless Pipelines)</option>
+                    <option value="Hexagonal / Ports & Adapters Architecture">Isolated Business Logic Core (Hexagonal / Clean Architecture)</option>
                   </select>
                 </div>
 
                 {/* Tech Stack Matrix */}
                 <div className="bg-[#f8fbfe] p-4 rounded-3xl border border-[#dce6ee] space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-[#132b40]">Technology Stack Choices</span>
+                    <span className="font-bold text-[#132b40]">Technology Stack (Database, Queue & Cloud)</span>
                     <GlossaryLink termId="kafka" onSelectTerm={handleOpenGlossary}>
                       Event Brokers
                     </GlossaryLink>
@@ -1026,7 +1026,7 @@ export default function App() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label htmlFor="tech-db" className="block text-[11px] font-bold text-[#516b80] mb-1">Database</label>
+                      <label htmlFor="tech-db" className="block text-[11px] font-bold text-[#516b80] mb-1">Database Engine</label>
                       <input
                         id="tech-db"
                         type="text"
@@ -1036,7 +1036,7 @@ export default function App() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="tech-broker" className="block text-[11px] font-bold text-[#516b80] mb-1">Message Broker / Queue</label>
+                      <label htmlFor="tech-broker" className="block text-[11px] font-bold text-[#516b80] mb-1">Message Broker / Real-time Queue</label>
                       <input
                         id="tech-broker"
                         type="text"
@@ -1046,7 +1046,7 @@ export default function App() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="tech-backend" className="block text-[11px] font-bold text-[#516b80] mb-1">Backend Service Runtime</label>
+                      <label htmlFor="tech-backend" className="block text-[11px] font-bold text-[#516b80] mb-1">Backend Server Runtime</label>
                       <input
                         id="tech-backend"
                         type="text"
@@ -1056,7 +1056,7 @@ export default function App() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="tech-infra" className="block text-[11px] font-bold text-[#516b80] mb-1">Infrastructure & Cloud</label>
+                      <label htmlFor="tech-infra" className="block text-[11px] font-bold text-[#516b80] mb-1">Cloud Infrastructure</label>
                       <input
                         id="tech-infra"
                         type="text"
@@ -1071,7 +1071,7 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-1">
                     <label htmlFor="field-security" className="block font-bold text-[#132b40]">
-                      Authentication & Security Controls
+                      User Login & System Security Rules
                     </label>
                     <GlossaryLink termId="zero-trust" onSelectTerm={handleOpenGlossary}>
                       Zero-Trust
@@ -1095,7 +1095,7 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-1">
                     <label htmlFor="field-unit-tests" className="block font-bold text-[#132b40]">
-                      Unit Testing & Coverage Gates
+                      Automated Code Checks & Coverage Targets
                     </label>
                     <GlossaryLink termId="branch-coverage" onSelectTerm={handleOpenGlossary}>
                       Branch Coverage
@@ -1114,7 +1114,7 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-1">
                     <label htmlFor="field-integration" className="block font-bold text-[#132b40]">
-                      Integration Test Container Strategy
+                      Testing Against Real Temporary Databases
                     </label>
                     <GlossaryLink termId="integration-testing" onSelectTerm={handleOpenGlossary}>
                       Integration Testing
@@ -1133,7 +1133,7 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-1">
                     <label htmlFor="field-cicd" className="block font-bold text-[#132b40]">
-                      CI/CD Pipeline Security & Quality Gates
+                      Automated Release Checks & Security Scans
                     </label>
                     <GlossaryLink termId="ci-cd" onSelectTerm={handleOpenGlossary}>
                       CI/CD
@@ -1157,7 +1157,7 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-1">
                     <label htmlFor="field-deploy" className="block font-bold text-[#132b40]">
-                      Deployment Rollout Strategy
+                      How New Updates Roll Out to Users
                     </label>
                     <GlossaryLink termId="canary-deployment" onSelectTerm={handleOpenGlossary}>
                       Canary Deployments
@@ -1176,7 +1176,7 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-1">
                     <label htmlFor="field-rollback" className="block font-bold text-[#132b40]">
-                      Emergency Rollback Runbook Steps
+                      Emergency Rollback Steps (If errors occur)
                     </label>
                     <GlossaryLink termId="rollback" onSelectTerm={handleOpenGlossary}>
                       Rollback Procedure
@@ -1195,7 +1195,7 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-1">
                     <label htmlFor="field-dr" className="block font-bold text-[#132b40]">
-                      Disaster Recovery Targets (RTO / RPO)
+                      Disaster Recovery (How fast to recover if a cloud center fails?)
                     </label>
                     <div className="flex gap-2">
                       <GlossaryLink termId="rto" onSelectTerm={handleOpenGlossary}>

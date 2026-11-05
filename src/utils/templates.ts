@@ -41,7 +41,7 @@ export const TEMPLATES: Record<string, { label: string; description: string; dat
 
       deploymentStrategy: 'ArgoCD GitOps Canary deployments (10% -> 25% -> 50% -> 100%) with automated rollbacks on metric anomalies.',
       monitoringAlerting: 'Prometheus metrics + OpenTelemetry distributed tracing into Grafana. Critical P1 alerts trigger PagerDuty if Kafka lag exceeds 10,000 msgs for 3 min.',
-      rollbackProcedure: '1. Abort ArgoCD sync rollout.\n2. Run `argocd app rollback aegis-core --to-revision <PREV_STABLE_TAG>`.\n3. Run db-migration verify script to ensure backward compatibility.\n4. Post incident notice to Slack #incidents-prod channel.',
+      rollbackProcedure: '1. Abort ArgoCD sync rollout.\n2. Run `argocd app rollback <APP_NAME> --to-revision <PREV_STABLE_TAG>`.\n3. Run db-migration verify script to ensure backward compatibility.\n4. Post incident notice to Slack #incidents-prod channel.',
       disasterRecovery: 'RPO < 1 minute, RTO < 15 minutes. Multi-region automated failover executed via `scripts/dr-orchestrator.sh` with Route53 DNS health check failover.',
       incidentEscalation: 'Severity 1 (Data loss or active breach): PagerDuty page to Primary On-Call SRE + VP Engineering within 2 minutes. War room open immediately.'
     }
